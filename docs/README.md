@@ -1,7 +1,7 @@
 ---
 home: true
 lang: zh-CN
-heroText: Larassa_Blog
+heroText: Larassa Blog
 heroImage: /logo.jpg
 actionText: 开始 →
 actionLink: /vue/

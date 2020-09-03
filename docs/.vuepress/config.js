@@ -1,9 +1,9 @@
 module.exports = {
   // 页面标题
-  title: 'Larassa_Blog',
+  title: 'Larassa Blog',
   // 网页描述
 	description: '小黑田心的天坑',
-	base: '/Larassa_Blog/',
+	base: '/blog/',
   head: [
     // 页面icon
     ['link', { rel: 'icon', href: '/icon.png' }]
@@ -20,7 +20,7 @@ module.exports = {
     // 所有页面自动生成侧边栏
     sidebar: 'auto',
     // 仓库地址
-    repo: 'https://github.com/YYYLYYY/Larassa_Blog.git',
+    repo: 'https://github.com/Larassa/blog.git',
     // 仓库链接label
     repoLabel: 'Github',
     // 编辑链接
