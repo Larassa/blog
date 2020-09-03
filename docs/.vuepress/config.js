@@ -2,7 +2,8 @@ module.exports = {
   // 页面标题
   title: 'Larassa_Blog',
   // 网页描述
-  description: '小黑田心的天坑',
+	description: '小黑田心的天坑',
+	base: '/Larassa_Blog/',
   head: [
     // 页面icon
     ['link', { rel: 'icon', href: '/icon.png' }]
