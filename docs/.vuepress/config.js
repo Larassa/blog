@@ -24,9 +24,9 @@ module.exports = {
     // 仓库链接label
     repoLabel: 'Github',
     // 编辑链接
-    editLinks: true,
-    // 编辑链接label
-    editLinkText: '编辑此页',
+    // editLinks: true,
+    // // 编辑链接label
+    // editLinkText: '编辑此页',
     // 导航
     nav: [
       // { text: '前端面试之道',link: '/interview/'},
