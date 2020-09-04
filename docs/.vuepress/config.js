@@ -36,23 +36,16 @@ module.exports = {
       //     { text: '你不知道的JavaScript(下)', link: '/books/你不知道的javascript下'}
       //   ]
 			// },
-			{ text: 'HTML', items: [
-				{ text: '基础知识', link: '/HTML/' },
-				{ text: '进阶', link: '/HTML/advanced' },
+			{ text: '前端', items: [
+				{ text: 'HTML', link: '/HTML/' },
+				{ text: 'CSS', link: '/CSS/' },
+				{ text: 'JavaScript', link: '/JavaScript/' }
 			]},
-			{ text: 'CSS', items: [
-				{ text: '基础知识', link: '/CSS/' },
-				{ text: '进阶', link: '/CSS/advanced' },
-			]},
-			{ text: 'JavaScript', items: [
-				{ text: '基础知识', link: '/javaScript/' },
-				{ text: '进阶', link: '/javaScript/advanced' },
-			]},
-      { text: '数据结构和算法', link: '/algorithm/'},
-      { text: 'Vue', items: [
+			{ text: 'Vue', items: [
 				{text: 'Vue源码', link: '/vue/'},
 				{text: 'API', link: '/vue/API'},
 			]},
+      { text: '数据结构和算法', link: '/algorithm/'},
 			{ text: 'Webpack',link: '/webpack/'},
 			{ text: 'Node',link: '/node/'},
 			
