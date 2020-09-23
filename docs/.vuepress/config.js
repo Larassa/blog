@@ -39,7 +39,8 @@ module.exports = {
 			{ text: '前端', items: [
 				{ text: 'HTML', link: '/HTML/' },
 				{ text: 'CSS', link: '/CSS/' },
-				{ text: 'JavaScript', link: '/JavaScript/' }
+				{ text: 'JavaScript', link: '/JavaScript/' },
+				{ text: 'TypeScript', link: '/TypeScript/' }
 			]},
 			{ text: 'Vue', items: [
 				{text: 'Vue源码', link: '/vue/'},
