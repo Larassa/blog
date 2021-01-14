@@ -37,14 +37,14 @@ module.exports = {
       //   ]
 			// },
 			{ text: '前端', items: [
-				{ text: 'HTML', link: '/HTML/' },
-				{ text: 'CSS', link: '/CSS/' },
-				{ text: 'JavaScript', link: '/JavaScript/' },
-				{ text: 'TypeScript', link: '/TypeScript/' }
+				{ text: 'HTML', link: '/html/' },
+				{ text: 'CSS', link: '/css/' },
+				{ text: 'JavaScript', link: '/javaScript/' },
+				{ text: 'TypeScript', link: '/typeScript/' }
 			]},
 			{ text: 'Vue', items: [
-				{text: 'Vue源码', link: '/vue/'},
-				{text: 'API', link: '/vue/API'},
+				{text: 'Vue源码', link: '/vue/analysis/'},
+				{text: 'API', link: '/vue/api/'},
 			]},
       { text: '数据结构和算法', link: '/algorithm/'},
 			{ text: 'Webpack',link: '/webpack/'},
