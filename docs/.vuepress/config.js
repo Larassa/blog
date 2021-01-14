@@ -42,10 +42,12 @@ module.exports = {
 				{ text: 'JavaScript', link: '/javaScript/' },
 				{ text: 'TypeScript', link: '/typeScript/' }
 			]},
-			{ text: 'Vue', items: [
-				{text: 'Vue源码', link: '/vue/analysis/'},
-				{text: 'API', link: '/vue/api/'},
-			]},
+			{ text: 'Vue', 
+				items: [
+					{text: 'Vue源码', link: '/vue/analysis'},
+					{text: 'API', link: '/vue/api'},
+				]
+			},
       { text: '数据结构和算法', link: '/algorithm/'},
 			{ text: 'Webpack',link: '/webpack/'},
 			{ text: 'Node',link: '/node/'},
