@@ -4,7 +4,7 @@ lang: zh-CN
 heroText: Larassa Blog
 heroImage: /logo.svg
 actionText: 开始 →
-actionLink: /vue/source
+actionLink: /vue/analysis
 features:
 - title: A Blog
   details: 专注写作前端博客，记录日常所得
