@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>获取浏览器地址</title>
+</head>
+<body>
+	<div>pra2</div>
+
+
+	<script src="./common/js/jquery.js"></script>
+	<script>
+		// window.location.search;  获取的是URL最后的参数部分：就是"?"后面的部分，包括“?”本身。
+		// window.location.href;获取的是整个URL路径字符串。
+		$(function(){
+			
+			console.log(window.location)
+			console.log("window.location.search", window.location.search)
+			console.log("window.location.href",  new URL(window.location.href))
+		})
+		
+	</script>
+	
+</body>
+</html>
