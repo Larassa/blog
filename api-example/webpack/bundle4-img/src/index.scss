@@ -1,0 +1,15 @@
+.box1 {
+	width: 200px;
+	height: 200px;
+	background-image: url('./img/0171dc5c613a42a801213f26d46234.jpg@1280w_1l_2o_100sh.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.box2 {
+	@extend .box1;
+	background-image: url('./img/achievement__monochromatic.svg');
+}
+.box3 {
+	@extend .box1;
+	background-image: url('./img/clip-waiting.png');
+}

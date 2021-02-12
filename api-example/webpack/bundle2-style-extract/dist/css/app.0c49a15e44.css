@@ -1,0 +1,15 @@
+body,
+html {
+  height: 100%;
+  background: green;
+}
+
+#title {
+  color: yellow;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+}
+

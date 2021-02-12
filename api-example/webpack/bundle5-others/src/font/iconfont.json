@@ -1,0 +1,72 @@
+{
+  "id": "1995555",
+  "name": "mini_app",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16288100",
+      "name": "面性冰雹",
+      "font_class": "mianxingbingbao",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "16288101",
+      "name": "面性暴雨",
+      "font_class": "mianxingbaoyu",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "16288102",
+      "name": "面性大风",
+      "font_class": "mianxingdafeng",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "16288103",
+      "name": "面性彩虹",
+      "font_class": "mianxingcaihong",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "16288104",
+      "name": "面性大暴雨",
+      "font_class": "mianxingdabaoyu",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "16288105",
+      "name": "面性大雨",
+      "font_class": "mianxingdayu",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "16288106",
+      "name": "面性冻雨",
+      "font_class": "mianxingdongyu",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "16288107",
+      "name": "面性浮尘",
+      "font_class": "mianxingfuchen",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "16288108",
+      "name": "面性低温",
+      "font_class": "mianxingdiwen",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    }
+  ]
+}
