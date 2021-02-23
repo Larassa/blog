@@ -1,0 +1,18 @@
+<svg width="336" height="345" class="dv-border-svg-container"><defs><filter id="borderr-box-12-filterId-1613285195503" height="150%" width="150%" x="-25%" y="-25%"><feMorphology operator="dilate" radius="1" in="SourceAlpha" result="thicken"></feMorphology><feGaussianBlur in="thicken" stdDeviation="2" result="blurred"></feGaussianBlur><feFlood flood-color="rgba(124,231,253,0.7)" result="glowColor"><animate attributeName="flood-color" values="
+              rgba(124,231,253,0.7);
+              rgba(124,231,253,0.3);
+              rgba(124,231,253,0.7);
+            " dur="3s" begin="0s" repeatCount="indefinite"></animate></feFlood><feComposite in="glowColor" in2="blurred" operator="in" result="softGlowColored"></feComposite><feMerge><feMergeNode in="softGlowColored"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><path fill="transparent" stroke-width="2" stroke="#2e6099" d="
+        M15 5 L 321 5 Q 331 5, 331 15
+        L 331 330 Q 331 340, 321 340
+        L 15, 340 Q 5 340 5 330 L 5 15
+        Q 5 5 15 5
+      "></path><path stroke-width="2" fill="transparent" stroke-linecap="round" filter="url(#borderr-box-12-filterId-1613285195503)" d="M 20 5 L 15 5 Q 5 5 5 15 L 5 20" stroke="#7ce7fd"></path><path stroke-width="2" fill="transparent" stroke-linecap="round" filter="url(#borderr-box-12-filterId-1613285195503)" d="M 316 5 L 321 5 Q 331 5 331 15 L 331 20" stroke="#7ce7fd"></path><path stroke-width="2" fill="transparent" stroke-linecap="round" filter="url(#borderr-box-12-filterId-1613285195503)" d="
+        M 316 340 L 321 340
+        Q 331 340 331 330
+        L 331 325
+      " stroke="#7ce7fd"></path><path stroke-width="2" fill="transparent" stroke-linecap="round" filter="url(#borderr-box-12-filterId-1613285195503)" d="
+        M 20 340 L 15 340
+        Q 5 340 5 330
+        L 5 325
+      " stroke="#7ce7fd"></path></svg>
