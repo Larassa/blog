@@ -36,12 +36,14 @@ module.exports = {
       //     { text: '你不知道的JavaScript(下)', link: '/books/你不知道的javascript下'}
       //   ]
 			// },
-			{ text: '前端', items: [
-				{ text: 'HTML', link: '/html/' },
-				{ text: 'CSS', link: '/css/' },
-				{ text: 'JavaScript', link: '/javaScript/' },
-				{ text: 'TypeScript', link: '/typeScript/' }
-			]},
+			{ text: '前端', 
+        items: [
+          { text: 'HTML', link: '/html/' },
+          { text: 'CSS', link: '/css/' },
+          { text: 'JavaScript', link: '/javaScript/' },
+          { text: 'TypeScript', link: '/typeScript/' }
+			  ]
+      },
 			{ text: 'Vue', 
 				items: [
 					{text: 'Vue源码', link: '/vue/analysis'},
@@ -54,7 +56,14 @@ module.exports = {
 			
       // { text: 'VuePress',link: '/vuepress/'},
       // { text: '基础配置功能',link: '/common/'}
-  ]},
+    ],
+    sidebar: {
+      "/css/": [
+        '',
+        'advanced'
+      ]
+    }
+  },
   configureWebpack: {
     resolve: {
       // 静态资源的别名
