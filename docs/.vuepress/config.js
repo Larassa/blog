@@ -38,20 +38,32 @@ module.exports = {
 			// },
 			{ text: '前端', 
         items: [
-          { text: 'HTML', link: '/html/' },
-          { text: 'CSS', link: '/css/' },
-          { text: 'JavaScript', link: '/javaScript/' },
-          { text: 'TypeScript', link: '/typeScript/' }
+          {
+            text: '基础',
+            items: [
+              { text: 'HTML', link: '/html/' },
+              { text: 'CSS', link: '/css/' },
+              { text: 'JavaScript', link: '/javaScript/' },
+              { text: 'TypeScript', link: '/typeScript/' }
+            ]
+          },
+          {
+            text: '框架',
+            items: [
+              {
+                text: 'VUE', link: '/vue/'
+              },
+            ]
+          },
+          {
+            text: '工具',
+            items: [
+              { text: 'Webpack',link: '/webpack/'},
+            ]
+          }
 			  ]
       },
-			{ text: 'Vue', 
-				items: [
-					{text: 'Vue源码', link: '/vue/analysis'},
-					{text: 'API', link: '/vue/api'},
-				]
-			},
       { text: '数据结构和算法', link: '/algorithm/'},
-			{ text: 'Webpack',link: '/webpack/'},
 			{ text: 'Node',link: '/node/'},
 			
       // { text: 'VuePress',link: '/vuepress/'},
@@ -61,6 +73,13 @@ module.exports = {
       "/css/": [
         '',
         'advanced'
+      ],
+      "/vue/": [
+        '',
+        'analysis'
+      ],
+      "/javaScript/": [
+        'es6'
       ]
     }
   },
