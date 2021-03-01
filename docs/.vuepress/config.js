@@ -51,8 +51,11 @@ module.exports = {
             text: '框架',
             items: [
               {
-                text: 'VUE', link: '/vue/'
+                text: 'VUE2', link: '/vue/'
               },
+              {
+                text: 'VUE3', link: '/vue3/'
+              }
             ]
           },
           {
@@ -77,6 +80,9 @@ module.exports = {
       "/vue/": [
         '',
         'analysis'
+      ],
+      "/vue3/": [
+        ''
       ],
       "/javaScript/": [
         'es6'
