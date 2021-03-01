@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-		
+		home
   </div>
 </template>
 
@@ -9,12 +9,12 @@
 export default {
   name: "Home",
 	created() {
-		this.$http({
-			url: '',
-			method: ''
-		}).then(res => {
+		// this.$http({
+		// 	url: '',
+		// 	method: ''
+		// }).then(res => {
 
-		})
+		// })
 	}
 };
 </script>
