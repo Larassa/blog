@@ -80,7 +80,10 @@ module.exports = {
       ],
       "/javaScript/": [
         'es6'
-      ]
+      ],
+			"/typeScript/": [
+				''
+			]
     }
   },
   configureWebpack: {
