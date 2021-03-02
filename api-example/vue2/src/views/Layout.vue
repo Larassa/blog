@@ -11,28 +11,20 @@
 </template>
 
 <script>
-import SideBar from './SideBar.vue'
+import SideBar from "../components/SideBar";
 
 export default {
-  name: 'Layout',
+  name: "Layout",
   components: {
     SideBar
   },
   data() {
-    return {
-
-    }
+    return {};
   },
-  created() {
-
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
-}
+  created() {},
+  mounted() {},
+  methods: {}
+};
 </script>
 
 <style scoped lang="scss">
@@ -43,8 +35,7 @@ export default {
   .flex-box {
     flex: 1;
     overflow-x: hidden;
-    margin-left: 30px
+    margin-left: 30px;
   }
 }
-
 </style>

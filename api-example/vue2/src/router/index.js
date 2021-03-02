@@ -8,12 +8,12 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Layout",
     component: Layout,
     children: [
       {
-        path: '/',
-        component: () => import('../views/Home.vue')
+        path: "/",
+        name: "Dashboard",
+        component: () => import("../views/Home.vue")
       }
     ]
   }

@@ -63,6 +63,12 @@ module.exports = {
             items: [
               { text: 'Webpack',link: '/webpack/'},
             ]
+          },
+          {
+            text: '测试',
+            items: [
+              { text: 'Vue Test Utils', link: '/vueTestUtils/' }
+            ]
           }
 			  ]
       },
@@ -89,7 +95,10 @@ module.exports = {
       ],
 			"/typeScript/": [
 				''
-			]
+			],
+      "/vueTestUtils/": [
+        ''
+      ]
     }
   },
   configureWebpack: {
