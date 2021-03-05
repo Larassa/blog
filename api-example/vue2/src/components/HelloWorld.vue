@@ -1,16 +1,15 @@
 <!-- -->
 <template>
   <div>
-
+    {{ msg }}
+    {{ pwd }}
   </div>
 </template>
 
 <script>
 
 export default {
-  props: {
-    msg: String
-  },
+  props: ['msg', 'pwd'],
   data() {
     return {
 
