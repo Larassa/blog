@@ -18,7 +18,7 @@ module.exports = {
     // 最后更新时间
     lastUpdated: '最后更新时间',
     // 所有页面自动生成侧边栏
-    sidebar: 'auto',
+    // sidebar: 'auto',
     // 仓库地址
     repo: 'https://github.com/Larassa/blog.git',
     // 仓库链接label
