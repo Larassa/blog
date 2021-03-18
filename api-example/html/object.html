@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+  <script>
+    /** Object.defineProperty() 会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象
+    * 接收三个参数
+    * 1. obj 要定义属性的对象。
+    * 2. prop 要定义或修改的属性的名称或 Symbol 。
+    * 3. descriptor 要定义或修改的属性描述符。
+    * 
+    * descriptor: {
+    *   configurable: false  特性表示对象的属性是否可以被删除，以及除 value 和 writable 特性外的其他特性是否可以被修改。
+    *   enumerable: false    定义了对象的属性是否可以在 for...in 循环和 Object.keys() 中被枚举。
+    *   writable: false      是否可修改
+    *   value: undefined     要定义或修改的属性的值
+    *   get: undefined
+    *   set: undefined
+    * }
+    * 
+    * 
+    * 
+    * */
+    
+
+    let temp = Object.defineProperty({}, 'a', {
+      value: 2,
+      writable: false,
+    })
+    console.log(temp)
+
+    // 继承
+
+    function Name() {}
+
+    let temp1 = Object.defineProperty(Name.prototype, 'color', {
+      value: 'red',
+      writable: false
+    })
+    console.info(Name.prototype)
+
+  </script>
+</body>
+</html>

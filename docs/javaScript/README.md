@@ -11,6 +11,20 @@
 
 
 
+## 原型
+
+
+
+
+
+## 闭包
+
+
+
+## 深层拷贝
+
+
+
 ## instanceof
 
 > 1. instanceof用于确认对象是什么类型，与typeof相比，instanceof更为具体，且instanceof可以判断一个实例是否属于他的父类
@@ -28,4 +42,3 @@ let foo = new Foo('red')
 
 console.log(foo instanceof Foo)  // true
 ```
-

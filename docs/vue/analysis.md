@@ -7,14 +7,22 @@
 	- benchmarks
 	- build
 	- examples
-	- flow
+	- flow          # 类型声明
 	- packages
 	- src
-		- compiler
-		- core
+		- compiler  # 编译
+		- core  
+			- components
+			- global-api
+			- instance
+			- observer        
+			- util
+			- vdom            # 虚拟dom
 		- platforms
+			- web
+			- weex
 		- server
-		- sfc
+		- sfc                # 单文件解析
 		- shared
 	- test
 		- e2e
