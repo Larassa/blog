@@ -40,10 +40,12 @@
     // 实例原型的构造函数就是父类本身
     console.log('a.__proto__.constructor === Foo', a.__proto__.constructor === Foo)
     // 所以实例原型的构造函数 等于 父类的原型
-    console.log('a.__proto__.constructor === Foo.prototype', a.__proto__ === Foo.prototype)
+    console.log('a.__proto__.constructor === Foo.prototype', a.__proto__ === Foo.constructor.prototype)
 
     // prototype 和 __proto__
     
+
+
   </script>
 </body>
 </html>

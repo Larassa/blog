@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>deepCopy</title>
+</head>
+<body>
+  <script>
+    // 深层拷贝
+
+    // 1. 数组
+
+    let arrTemp = [
+      {  a: 1, b: { name: 'b' }, c: [ { name: 'cItem' } ] },
+      {  a: 2, b: { name: 'b2' }, c: [ { name: 'cItem2' } ] },
+    ]
+
+    // 2. 对象
+
+    let objTemp = {
+      a: 1, 
+      b: { color: 'red' }, 
+      c: [
+        { color: 'green', name: 'cItem' }
+      ]
+    }
+
+    let tempData = null
+
+    function deepCopy(obj) {
+      var result = null
+      //判断是否是简单数据类型，
+      if(typeof obj == "object"){
+        //复杂数据类型
+        result = obj.constructor === Array ? [] : {};
+        for(let i in obj) {
+          result[i] = typeof obj[i] == "object" ? deepCopy(obj[i]) : obj[i];
+        }
+      } else {
+        //简单数据类型 直接 == 赋值
+        result = obj;
+      }
+      return result;
+    }
+    console.log(deepCopy(arrTemp))
+  </script>
+</body>
+</html>

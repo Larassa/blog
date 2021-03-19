@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-position</title>
+
+  <style>
+    .img-wrap {
+      border: 1px solid #000;
+      position: relative;
+      width: 100%;
+      height: 116px;
+      overflow: hidden;
+    }
+    .preview {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+      background-image: url('./static/02.webp');
+      background-position: 0 10px;
+      background-size: 1700px;
+    }
+  </style>
+</head>
+<body>
+  <div class="img-wrap">
+    <!-- <img src="./static/01.webp" alt=""> -->
+    <div class="preview"></div>
+  </div>
+</body>
+</html>
