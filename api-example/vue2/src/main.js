@@ -7,10 +7,10 @@ import "element-ui/lib/theme-chalk/index.css";
 
 import "./assets/style/common.css";
 
-// import { httpRequest } from "./httpRequest";
+import { httpRequest } from "./httpRequest";
 
 Vue.config.productionTip = false;
-// Vue.prototype.$http = httpRequest
+Vue.prototype.$http = httpRequest
 
 Vue.use(ElementUI);
 

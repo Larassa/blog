@@ -4,9 +4,7 @@ export const httpRequest = ({ url, method, params = "", data = {} }) => {
   const instance = axios.create({
     baseURL: `http://127.0.0.1:8090/`,
     headers: {
-      "Access-Control-Allow-Origin": "*"
-      // 'Content-type': 'application/x-www-form-urlencoded',
-      // 'Authorization': Cookie.get("accessToken") ? Cookie.get("accessToken") : ''
+      'Content-type': 'application/json'
     }
   });
   return instance({ url, method, params, data })

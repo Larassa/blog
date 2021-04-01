@@ -12,8 +12,10 @@ var server = http.createServer()
 // response 响应对象 
 server.on('request', function(request, response) {
 	console.log('收到请求', request.url)
-	response.setHeader('Content-Type', 'text/plain; charset=utf-8')
-	// request.setHeader('Access-Control-Allow-Origin', '*')
+	// 配置跨域
+	response.setHeader('Access-Control-Allow-Origin', '*');
+	response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
+	response.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 	let url = request.url
 	if(url == '/a') {
 		response.end('bbbb')
