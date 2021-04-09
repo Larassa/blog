@@ -12,15 +12,17 @@
     class Fun {
       constructor(name) {
         this.name = name
-        this.handle = this.handle.bind(this)
+        // this.handle = this.handle.bind(this)
       }
       handle() {
-        console.log('name:', this.name)
+        console.log('this:', this)
       }
     }
 
     let temp = new Fun('aaa')
-    console.log(temp.handle())
+    temp.handle()
+    const { handle } = temp
+    handle()   // 如果不bind this， 打印的this是undifined
 
     // 2. new.target  如果构造函数不是通过new命令或Reflect.construct()调用的，new.target会返回undefined，因此这个属性可以用来确定构造函数是怎么调用的。
     function Fun1(name) {
