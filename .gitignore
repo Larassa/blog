@@ -1,4 +1,5 @@
 docs/.vuepress/dist
-node_modules
+# node_modules
 package-lock.json
-vue/api-example/node_modules
+# vue/api-example/node_modules
+node_modules
