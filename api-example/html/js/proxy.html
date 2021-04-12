@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>proxy</title>
+</head>
+<body>
+  <script>
+    const data = {
+      "1": [
+        { id: 1, name: 'name1' },
+        { id: 2, name: 'name2' }
+      ],
+      "2": {
+        data1: [
+          { id: 1, name: 'name2-1-1' },
+          { id: 2, name: 'name2-1-2' },
+        ],
+        data2: [
+          { id: 1, name: 'name2-2-1' },
+          { id: 2, name: 'name2-2-2' },
+        ],
+      }
+    }
+
+    
+
+    // const temp = new Proxy(data, {
+    //   get(target, property, receiver) {
+    //     console.log('target', target)
+    //     console.log('property', property)
+    //     console.log('receiver', receiver)
+    //   }
+    // })
+    // temp[1]
+
+    const fun = (a, b) => {
+      return a + b
+    }
+    const temp1 = new Proxy(fun, {
+      get(target, property, receiver) {
+        console.log('target', target)
+        console.log('property', property)
+        console.log('receiver', receiver)
+      }
+    })
+    // temp1(1, 2)
+    console.log(temp1(1, 2))
+  </script>
+</body>
+</html>
