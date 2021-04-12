@@ -1,5 +1,7 @@
 import React from 'react';
 
+// import { BrowserRouter as Router, link } from 'react-router-dom';
+
 // function App() {
 //   return (
 //     <div>
@@ -35,6 +37,7 @@ class App extends React.Component {
 		}
 		// 为了在回调中使用 `this`，这个绑定是必不可少的
 		this.handleClick = this.handleClick.bind(this);
+		this.goHome = this.goHome.bind(this);
 	}
 	handleClick() {
 		let name = 'obj.name'
@@ -44,6 +47,11 @@ class App extends React.Component {
 			[name]: 'aaaaaaa'
 		}));
 	}
+
+	goHome() {
+		// Router.push('/home')
+	}
+
 	render() {
 		return (
 			<div>
@@ -52,6 +60,10 @@ class App extends React.Component {
 				{/* { RenderList(this.state) } */}
 				<RenderList list={ this.state.list }></RenderList>
 				<button onClick={ this.handleClick }>click</button>
+				<button onClick={ this.goHome } >go home</button>
+				{/* <Router>
+					<link path="/home" >home</link>
+				</Router> */}
 			</div>
 		)
 	}
