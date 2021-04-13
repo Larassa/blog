@@ -59,6 +59,14 @@ module.exports = {
             ]
           },
           {
+            text: '移动端',
+            items: [
+              {
+                text: '微信小程序', link: '/wechat-mini/'
+              }
+            ]
+          },
+          {
             text: '工具',
             items: [
               { text: 'Webpack',link: '/webpack/'},
@@ -78,10 +86,18 @@ module.exports = {
       // { text: 'VuePress',link: '/vuepress/'},
       // { text: '基础配置功能',link: '/common/'}
     ],
+    sidebarDepth: 4,
     sidebar: {
       "/css/": [
-        '',
-        'advanced'
+        {
+          title: '基础知识点',
+          collapsable: false,
+          children: [
+            '',
+            'background'
+          ]
+        },
+        // 'advanced'
       ],
       "/vue/": [
         '',
@@ -98,6 +114,9 @@ module.exports = {
 				''
 			],
       "/vueTestUtils/": [
+        ''
+      ],
+      "/wechat-mini/": [
         ''
       ]
     }
