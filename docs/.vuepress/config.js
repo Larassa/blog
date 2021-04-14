@@ -108,7 +108,21 @@ module.exports = {
       ],
       "/javaScript/": [
         '',
-        'es6'
+        {
+          title: '进阶',
+          collapsable: false,
+          children: [
+            'curry'
+          ]
+        },
+        {
+          title: 'es6',
+          collapsable: false,
+          children: [
+            'es6-proxy',
+            'es6-class'
+          ]
+        },
       ],
 			"/typeScript/": [
 				''

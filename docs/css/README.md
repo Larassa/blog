@@ -8,7 +8,7 @@
 
 > <font color="green"> 注：一个选择器中只能使用一个伪元素。伪元素必须紧跟在语句中的简单选择器/基础选择器之后。</font >
 
-### <img src="./img/eg.svg" style="zoom:20%;" />举栗子
+### <img src="https://raw.githubusercontent.com/Larassa/docs-img/main/css/eg.svg" style="zoom:20%;" />举栗子
 
 ```html
 <p>伪元素和伪类的区别</p>
@@ -20,7 +20,7 @@ p::first-letter{
 
 
 
-<img src="./img/eg1.png" style="zoom:100%;" />
+<img src="https://raw.githubusercontent.com/Larassa/docs-img/main/css/eg1.png" style="zoom:100%;" />
 
 如果不使用伪元素想要达到上述效果，那么需要在代码中加入实现该效果的元素并加入样式。
 

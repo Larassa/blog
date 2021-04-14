@@ -7,9 +7,11 @@
 	<title>模版语法</title>
 </head>
 <body>
-	{ a }
+	<div data-name="name" onClick="{ handleClick }">name</div>
 	<script>
-		var a = 1
+		function handleClick(e) {
+			console.log(e)
+		}
 	</script>
 </body>
 </html>

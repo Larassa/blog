@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>柯里化</title>
+</head>
+<body>
+  <script>
+    // 
+    function add(a, b, c) {
+      return a+b+c
+    }
+
+    // function curry(fn) {
+    //   return function(a) {
+    //     return function(b) {
+    //       return function(c) {
+    //         return fn(a, b, c)
+    //       }
+    //     }
+    //   }
+    // }
+    // const carried = curry(add)
+    // const sum = carried(1)
+    // console.log(sum(2)(3))
+
+    // 
+    const person = [
+      { name: 'lisa', age: 1 },
+      { name: 'jennie', age: 2 },
+      { name: 'rose', age: 3 },
+      { name: 'jisoo', age: 4 }
+    ]
+    function temp (key, obj) {
+      return obj[key]
+    }
+    function curry1(fn) {
+      return function(key) {
+        return function(obj) {
+          return fn(key, obj)
+        }
+      }
+    }
+    const prop = curry1(temp)
+    const nameList = person.map(item => {
+      return prop('name')(item)
+    })
+    // console.log(nameList)
+
+
+    function sub_curry(fn) {
+        var args = [].slice.call(arguments, 1);
+        return function() {
+            return fn.apply(this, args.concat([].slice.call(arguments)));
+        };
+    }
+
+    function curry(fn, length) {
+
+        length = length || fn.length;
+
+        var slice = Array.prototype.slice;
+
+        return function() {
+            if (arguments.length < length) {
+                var combined = [fn].concat(slice.call(arguments));
+                return curry(sub_curry.apply(this, combined), length - arguments.length);
+            } else {
+                return fn.apply(this, arguments);
+            }
+        };
+    }
+    let prop1 = curry(function (key, obj) {
+        return obj[key]
+    });
+    // console.log( person.map(prop1('name')) )
+
+
+    // 
+    function curry2(fn, ...args) {
+      console.log('args', args)
+      // console.log('fn', fn)
+      if (args.length >= fn.length) {
+        return fn(...args);
+      } else {
+        return (...args2) => curry2(fn, ...args, ...args2);
+      }
+    }
+    let temp1 = curry2(add)
+    // console.log('add', temp1(1)(2))
+    console.log('temp1', temp1)
+    
+  </script>
+</body>
+</html>
