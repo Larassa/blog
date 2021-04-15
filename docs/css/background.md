@@ -21,4 +21,4 @@
 
 > 取值为round时，图像会拉伸至充满容器，根据高度自动计算并重复拼接图像
 
-<img src="./img/bg-repeat-round.gif" />
+![](https://raw.githubusercontent.com/Larassa/docs-img/main/css/bg-repeat-round.gif)
