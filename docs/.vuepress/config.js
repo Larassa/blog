@@ -123,6 +123,13 @@ module.exports = {
             'es6-class'
           ]
         },
+        {
+          title: '专题',
+          collapsable: false,
+          children: [
+            'symbol'
+          ]
+        }
       ],
 			"/typeScript/": [
 				''
@@ -132,6 +139,15 @@ module.exports = {
       ],
       "/wechat-mini/": [
         ''
+      ],
+      "/algorithm/": [
+        {
+          title: '算法',
+          collapsable: false,
+          children: [
+            'recursion'
+          ]
+        }
       ]
     }
   },
