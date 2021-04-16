@@ -3,7 +3,7 @@ module.exports = {
   title: 'Larassa Blog',
   // 网页描述
 	description: '小黑田心的天坑',
-	base: '/blog/',
+	base: '',
   head: [
     // 页面icon
     ['link', { rel: 'icon', href: '/icon.png' }]
@@ -29,13 +29,6 @@ module.exports = {
     // editLinkText: '编辑此页',
     // 导航
     nav: [
-      // { text: '前端面试之道',link: '/interview/'},
-      // { text: 'JavaScript书籍', items: [
-      //     { text: '你不知道的JavaScript(上)', link: '/books/你不知道的javascript上'}, 
-      //     { text: '你不知道的JavaScript(中)', link: '/books/你不知道的javascript中'},
-      //     { text: '你不知道的JavaScript(下)', link: '/books/你不知道的javascript下'}
-      //   ]
-			// },
 			{ text: '前端', 
         items: [
           {
@@ -55,6 +48,9 @@ module.exports = {
               },
               {
                 text: 'VUE3', link: '/vue3/'
+              },
+              {
+                text: 'REACT', link: '/react/'
               }
             ]
           },
@@ -96,40 +92,50 @@ module.exports = {
             '',
             'background'
           ]
-        },
-        // 'advanced'
+        }
       ],
       "/vue/": [
-        '',
+        {
+          title: '知识点',
+          collapsable: false,
+          children: [
+            'component',
+            'slot'
+          ]
+        },
         'analysis'
       ],
       "/vue3/": [
         ''
       ],
       "/javaScript/": [
-        '',
+        {
+          title: '基础',
+          collapsable: false,
+          children: [
+            'base/dataType',
+            'base/dataScope',
+            'base/copy',
+            'base/prototype',
+            'base/symbol'
+          ]
+        },
         {
           title: '进阶',
           collapsable: false,
           children: [
-            'curry'
+            'advanced/curry'
           ]
         },
         {
           title: 'es6',
           collapsable: false,
           children: [
-            'es6-proxy',
-            'es6-class'
+            'es6/proxy',
+            'es6/class',
+            'es6/promise'
           ]
         },
-        {
-          title: '专题',
-          collapsable: false,
-          children: [
-            'symbol'
-          ]
-        }
       ],
 			"/typeScript/": [
 				''
