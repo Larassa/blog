@@ -1,16 +1,17 @@
 import React from 'react';
 
-// import { BrowserRouter as Router, link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { 
+	BrowserRouter as Router,
+	Switch,
+  Route,
+	Link
+} from "react-router-dom";
+import RouteConfig from './router/index'
 
-// function App() {
-//   return (
-//     <div>
+import Home from './components/Home'
+import About from './components/About'
 
-// 		</div>
-//   );
-// }
-
-// export default App;
 function RenderList(props) {
 	let temp = []
 	for(let i = 0; i < props.list.length; i++) {
@@ -49,21 +50,32 @@ class App extends React.Component {
 	}
 
 	goHome() {
-		// Router.push('/home')
+		console.log(this.props)
+		this.props.history.push('/home')
 	}
 
 	render() {
 		return (
 			<div>
-				<p>{ this.state.name }</p>
-				<p>{ this.state.obj.name }</p>
-				{/* { RenderList(this.state) } */}
-				<RenderList list={ this.state.list }></RenderList>
-				<button onClick={ this.handleClick }>click</button>
-				<button onClick={ this.goHome } >go home</button>
-				{/* <Router>
-					<link path="/home" >home</link>
-				</Router> */}
+				<Router>
+					<ul>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/about">About</Link>
+						</li>
+					</ul>
+					{/* <Switch>
+						<Route exact path="/">
+							<Home />
+						</Route>
+						<Route path="/about">
+							<About />
+						</Route>
+					</Switch> */}
+				</Router>
+				{/* <RouteConfig></RouteConfig> */}
 			</div>
 		)
 	}

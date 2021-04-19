@@ -84,6 +84,16 @@ module.exports = {
     ],
     sidebarDepth: 4,
     sidebar: {
+      "/html/": [
+        {
+          title: '知识点',
+          collapsable: false,
+          children: [
+            'canvas',
+            'svg'
+          ]
+        }
+      ],
       "/css/": [
         {
           title: '基础知识点',
@@ -117,14 +127,8 @@ module.exports = {
             'base/dataScope',
             'base/copy',
             'base/prototype',
-            'base/symbol'
-          ]
-        },
-        {
-          title: '进阶',
-          collapsable: false,
-          children: [
-            'advanced/curry'
+            'base/symbol',
+            'base/curry'
           ]
         },
         {
