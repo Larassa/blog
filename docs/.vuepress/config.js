@@ -65,7 +65,10 @@ module.exports = {
           {
             text: '工具',
             items: [
-              { text: 'Webpack',link: '/webpack/'},
+              { text: 'Webpack', link: '/webpack/'},
+              { text: 'yarn', link: '/yarn/'},
+              { text: 'npm', link: '/npm/'},
+              { text: 'git', link: '/git/'},
             ]
           },
           {
@@ -118,13 +121,28 @@ module.exports = {
       "/vue3/": [
         ''
       ],
+      "/react/": [
+        {
+          title: '路由4.x',
+          collapsable: false,
+          children: [
+            'router4/base',
+            'router4/mode',
+            'router4/matching',
+            'router4/nested',
+            'router4/props',
+            'router4/link',
+            'router4/config'
+          ]
+        }
+      ],
       "/javaScript/": [
         {
           title: '基础',
           collapsable: false,
           children: [
-            'base/dataType',
-            'base/dataScope',
+            'base/data-type',
+            'base/data-scope',
             'base/copy',
             'base/prototype',
             'base/symbol',
@@ -158,6 +176,15 @@ module.exports = {
             'recursion'
           ]
         }
+      ],
+      "/yarn/": [
+        ''
+      ],
+      "/npm/": [
+        ''
+      ],
+      "/git/": [
+        ''
       ]
     }
   },

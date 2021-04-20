@@ -5,12 +5,31 @@ import {
 	BrowserRouter as Router,
 	Switch,
   Route,
-	Link
+	Link,
+	useHistory 
 } from "react-router-dom";
-import RouteConfig from './router/index'
+import RouterConfig from './router/index'
 
-import Home from './components/Home'
-import About from './components/About'
+const ROUTES = [
+  {
+    path: '/home',
+    component: () => { return( <div>home</div> ) }
+  },
+  {
+    path: '/about',
+    component: () => { return( <div>about</div> ) },
+    children: [
+      {
+        path: '/temp1',
+        component: () => { return( <div>temp1</div> ) }
+      },
+      {
+        path: '/temp2',
+        component: () => { return( <div>temp2</div> ) }
+      }
+    ]
+  }
+]
 
 function RenderList(props) {
 	let temp = []
@@ -51,7 +70,9 @@ class App extends React.Component {
 
 	goHome() {
 		console.log(this.props)
-		this.props.history.push('/home')
+		// this.props.history.push('/home')
+		let history = useHistory();
+		history.push('/about')
 	}
 
 	render() {
@@ -60,22 +81,19 @@ class App extends React.Component {
 				<Router>
 					<ul>
 						<li>
-							<Link to="/">Home</Link>
+							<Link to="/home">Home</Link>
 						</li>
 						<li>
 							<Link to="/about">About</Link>
 						</li>
 					</ul>
-					{/* <Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route path="/about">
-							<About />
-						</Route>
-					</Switch> */}
+					<Switch>
+						{ROUTES.map((route, i) => (
+            	<RouterConfig key={i} {...route} />
+          	))}
+					</Switch>
 				</Router>
-				{/* <RouteConfig></RouteConfig> */}
+				{/* <button onClick={this.goHome}>go home</button> */}
 			</div>
 		)
 	}
