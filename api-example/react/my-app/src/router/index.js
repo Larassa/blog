@@ -4,7 +4,7 @@ import {
   Link
 } from "react-router-dom";
 // import Home from '../components/Home';
-// import About from '../components/About';
+import About from '../components/About';
 // export default class RouteConfig extends React.Component {
 //   render(){
 //     return(
@@ -22,7 +22,7 @@ const ROUTES = [
   },
   {
     path: '/about',
-    component: () => ( <div>about</div> ),
+    component: About,
     children: [
       {
         path: '/about/temp1',
@@ -42,7 +42,7 @@ export default function RouterConfig(route) {
       path={route.path}
       render={props => (
         // pass the sub-routes down to keep nesting
-        <route.component {...props} routes={route.children} />
+        <route.component {...props} routes={route.routes} />
       )}
     />
   );

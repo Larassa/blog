@@ -9,16 +9,17 @@ import {
 	useHistory 
 } from "react-router-dom";
 import RouterConfig from './router/index'
+import About from './components/About'
 
-const ROUTES = [
+const routes = [
   {
     path: '/home',
     component: () => { return( <div>home</div> ) }
   },
   {
     path: '/about',
-    component: () => { return( <div>about</div> ) },
-    children: [
+    component: About,
+    routes: [
       {
         path: '/temp1',
         component: () => { return( <div>temp1</div> ) }
@@ -88,7 +89,7 @@ class App extends React.Component {
 						</li>
 					</ul>
 					<Switch>
-						{ROUTES.map((route, i) => (
+						{routes.map((route, i) => (
             	<RouterConfig key={i} {...route} />
           	))}
 					</Switch>
