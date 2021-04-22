@@ -21,12 +21,12 @@ const routes = [
     component: About,
     routes: [
       {
-        path: '/temp1',
-        component: () => { return( <div>temp1</div> ) }
+        path: '/about/temp1',
+        component: () => <div>temp1</div>
       },
       {
-        path: '/temp2',
-        component: () => { return( <div>temp2</div> ) }
+        path: '/about/temp2',
+        component: () => <div>temp2</div>
       }
     ]
   }
@@ -85,7 +85,7 @@ class App extends React.Component {
 							<Link to="/home">Home</Link>
 						</li>
 						<li>
-							<Link to="/about">About</Link>
+							<Link to={ `/about/?ids=123` }>About</Link>
 						</li>
 					</ul>
 					<Switch>

@@ -1,43 +1,42 @@
 import React from 'react';
 import {
   Link,
-  Switch
+  Switch,
+	Route
 } from 'react-router-dom';
-import RouterConfig from '../router/index';
+import RouterConfig from '../router/index'
+export default class About extends React.Component {
+	constructor(props) {
+		super(props)
+		this.goHome = this.goHome.bind(this)
+	}
+	componentDidMount() {
+		console.log(this.props)
+	}
 
-const routes = [
-  {
-    path: '/home',
-    component: () => { return( <div>home</div> ) }
-  },
-  {
-    path: '/about',
-    component: () => { return( <div>about</div> ) },
-    routes: [
-      {
-        path: '/temp1',
-        component: () => { return( <div>temp1</div> ) }
-      },
-      {
-        path: '/temp2',
-        component: () => { return( <div>temp2</div> ) }
-      }
-    ]
-  }
-]
+	goHome() {
+		console.log(this)
+		this.props.history.push('/home?id=')
+	}
 
-export default function About() {
-  return(
-    <div>
-      {/* About */}
-      <Link to="/about/temp1">temp1</Link>
-      <Link to="/about/temp2">temp2</Link>
-
-      <Switch>
-        {routes.map((route, i) => (
-          <RouterConfig key={i} {...route} />
-        ))}
-      </Switch>
-    </div>
-  )
+	render() {
+		return(
+			<div>
+				{/* About */}
+				<Link to="/about/temp1">temp1</Link>
+				<Link to={`${this.props.match.path}/temp2`}>temp2</Link>
+				<button onClick={ this.goHome }>go home</button>
+				{/* <Switch>
+					{ this.props.routes.map((route, i) => (
+						<RouterConfig key={i} {...route} />
+					))}
+				</Switch> */}
+				<Route
+					path='/about/temp2'
+					children={<div>111111</div>}
+				/>
+			</div>
+		)
+	}
+  
 }
