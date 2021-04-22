@@ -40,9 +40,37 @@
 
 		// 手写promise
 		const p = new HD((resole, reject) => {
-			resole('resolve')
-		})
-		console.log(p)
+			// setTimeout(() => {
+				// resole('resole')
+				reject('reject')
+				console.log('log1')
+			// }, 1000)
+			// resole('resole')
+			// reject('reject')
+		}).then(
+			value => {
+				console.log('value', value)
+			},
+			reason => {
+				console.log('reason', abc)
+			}
+		)
+		// .then(
+		// 	value => {
+		// 		console.log('value1', value)
+		// 	},
+		// 	reason => {
+		// 		console.log('reason1', reason)
+		// 	}
+		// )
+		console.log('log')
+		// console.log(p)
+
+		// try {
+		// 	console.log(abc)
+		// } catch (error) {
+		// 	console.log('error', error)
+		// }
   </script>
 </body>
 </html>
