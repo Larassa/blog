@@ -1,8 +1,16 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-04-06 11:32:04
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-04-25 13:54:55
+ * @Description: file content
+-->
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    home
+    <HelloWorld msg="Welcome to Your Vue.js App" status='status' class="hello-world" @click="click"/>
   </div>
+  
 </template>
 
 <script>
@@ -14,5 +22,8 @@ export default {
   components: {
     HelloWorld,
   },
+  methods: {
+    click() {}
+  }
 };
 </script>

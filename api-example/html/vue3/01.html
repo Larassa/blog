@@ -1,0 +1,41 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-04-25 13:19:00
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-04-25 13:20:16
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js" ></script>
+  <title>组件</title>
+</head>
+<body>
+  <div id="components-demo">
+    <button-counter></button-counter>
+  </div>
+  <script>
+    // Create a Vue application
+    const app = Vue.createApp({})
+
+    // Define a new global component called button-counter
+    app.component('button-counter', {
+      data() {
+        return {
+          count: 0
+        }
+      },
+      template: `
+        <button v-on:click="count++">
+          You clicked me {{ count }} times.
+        </button>`
+    })
+
+    app.mount('#components-demo')
+  </script>
+</body>
+</html>
