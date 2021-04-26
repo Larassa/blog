@@ -1,0 +1,42 @@
+/*
+ * @Author: larassa 
+ * @Date: 2021-04-25 23:04:59 
+ * @Last Modified by: larassa
+ * @Last Modified time: 2021-04-25 23:15:43
+ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bind</title>
+</head>
+<body>
+	<script>
+		function demo() {
+			console.log(this)
+		}
+		const d = demo.bind({ a: 2 })
+		console.log(d())
+		// function Person(name) {
+		// 	this.name = name
+		// 	function speak() {
+		// 		console.log('我是' + name)
+		// 	}
+		// }
+		// function Animal(name) {
+		// 	this.name = name
+		// 	function speak() {
+		// 		console.log('我是' + name)
+		// 	}
+		// }
+		// let p = new Person('person')
+		// let cat = new Animal('cat')
+		// console.log(p)
+		// console.log(cat)
+		// let d = Person.call(Animal, 'd')
+		// console.log('d', d)
+	</script>
+</body>
+</html>

@@ -10,11 +10,12 @@ import {
 } from "react-router-dom";
 import RouterConfig from './router/index'
 import About from './components/About'
+import Home from './components/Home'
 
 const routes = [
   {
     path: '/home',
-    component: () => { return( <div>home</div> ) }
+    component: Home
   },
   {
     path: '/about',
