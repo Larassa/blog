@@ -26,15 +26,11 @@ export default class About extends React.Component {
 				<Link to="/about/temp1">temp1</Link>
 				<Link to={`${this.props.match.path}/temp2`}>temp2</Link>
 				<button onClick={ this.goHome }>go home</button>
-				{/* <Switch>
+				<Switch>
 					{ this.props.routes.map((route, i) => (
 						<RouterConfig key={i} {...route} />
 					))}
-				</Switch> */}
-				<Route
-					path='/about/temp2'
-					children={<div>111111</div>}
-				/>
+				</Switch>
 			</div>
 		)
 	}
