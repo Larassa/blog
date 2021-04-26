@@ -15,10 +15,12 @@
 
 ## background-repeat
 
-> 取值为space时，图像会尽可能得重复, 但是不会裁剪，第一个和最后一个图像会被固定在元素(element)的相应的边上, 同时空白会均匀地分布在图像之间. [`background-position`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position)属性会被忽视, 除非只有一个图像能被无裁剪地显示. 只在一种情况下裁剪会发生, 那就是图像太大了以至于没有足够的空间来完整显示一个图像.
+- 取值为space时，图像会尽可能得重复, 但是不会裁剪，第一个和最后一个图像会被固定在元素(element)的相应的边上, 同时空白会均匀地分布在图像之间. [`background-position`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position)属性会被忽视, 除非只有一个图像能被无裁剪地显示. 只在一种情况下裁剪会发生, 那就是图像太大了以至于没有足够的空间来完整显示一个图像.
 
-<img src="./img/bg-repeat-space.gif" />
+- 取值为round时，图像会拉伸至充满容器，根据高度自动计算并重复拼接图像
 
-> 取值为round时，图像会拉伸至充满容器，根据高度自动计算并重复拼接图像
+<iframe height="500" style="width: 100%;" scrolling="no" title="background" src="https://codepen.io/larassa/embed/wvgOwam?height=265&theme-id=dark&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/larassa/pen/wvgOwam'>background</a> by larassa
+  (<a href='https://codepen.io/larassa'>@larassa</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-![](https://raw.githubusercontent.com/Larassa/docs-img/main/css/bg-repeat-round.gif)

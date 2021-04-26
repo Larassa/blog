@@ -1,0 +1,47 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-04-26 09:48:03
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-04-26 11:40:33
+ * @Description: 伪元素
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素</title>
+  <style>
+    .ul-wrap {
+      /* list-style-type: decimal; */
+      list-style-position: inside;
+      /* margin-left: 400px; */
+    }
+    .ul-wrap span{
+      display: list-item;
+      /* list-style-position: outside; */
+    }
+    .ul-wrap span:nth-child(2n) {
+      list-style-image: url(https://img.zcool.cn/community/018579608517a711013f47207c7457.jpg@260w_195h_1c_1e_1o_100sh.jpg);
+    }
+    .ul-wrap span:nth-child(2n+1) {
+      list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+    }
+    .ul-wrap span::marker {
+      font-size: 200%; 
+      color: #00b7a8; 
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- ::marker -->
+  <div class="ul-wrap">
+    <span>11111</span>
+    <span>22222</span>
+    <span>33333</span>
+    <span>44444</span>
+  </div>
+</body>
+</html>

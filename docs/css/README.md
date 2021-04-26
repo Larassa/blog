@@ -10,6 +10,8 @@
 
 ### <img src="https://raw.githubusercontent.com/Larassa/docs-img/main/css/eg.svg" style="zoom:20%;" />举栗子
 
+- `::first-letter`
+
 ```html
 <p>伪元素和伪类的区别</p>
 
@@ -34,24 +36,28 @@ span {
 }
 ```
 
+- `::marker`
+
+`::marker`是用于设置为`display: list-item`的元素或伪元素上。如我们熟悉的`li`标签，所以普通元素也可以设置为`li`的样式
+
 
 
 [详细的栗子展示](https://codepen.io/larassa/pen/PoNebbv)
 
 ### 索引
 
-- ::after(:after)
-- ::before(:before)
-- ::first-letter(:first-letter)
-- ::first-line(:first-line)
-- ::backdrop
-- ::cue(:cue)
-- ::grammar-error
-- ::marker
-- ::placeholder
-- ::selection
-- ::slotted
-- ::spelling-error
+- `::after(:after)`
+- `::before(:before)`
+- `::first-letter(:first-letter)`
+- `::first-line(:first-line)`
+- `::backdrop`
+- `::cue(:cue)`
+- `::grammar-error`
+- `::marker`
+- `::placeholder`
+- `::selection`
+- `::slotted`
+- `::spelling-error`
 
 ## 伪类
 
