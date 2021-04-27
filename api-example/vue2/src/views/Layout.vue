@@ -1,3 +1,10 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-03-01 11:42:24
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-04-27 10:23:04
+ * @Description: file content
+-->
 <!-- 整体布局 -->
 <template>
   <div class="container">
@@ -31,6 +38,7 @@ export default {
 .container {
   .wrap {
     display: flex;
+    height: 100vh;
   }
   .flex-box {
     flex: 1;

@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-04-25 09:22:35
  * @LastEditors: larassa
- * @LastEditTime: 2021-04-26 16:56:09
+ * @LastEditTime: 2021-04-27 11:21:20
  * @Description: 组件通信
 -->
 
@@ -18,7 +18,33 @@
     <Select2 :value="select.value" @change="change"></Select2>
     <li>插槽</li>
     <SlotCom :optionsList="select.list">
-      <span slot="type">(slot type)</span>
+      <span>(slot type11111)</span>
+      <span slot="slotType">(slot type1)</span>
+    </SlotCom>
+    <li>作用域插槽：slot-scope</li>
+    <SlotCom :optionsList="select.list">
+      <template slot-scope="scope">
+        <span>{{ scope.row }}</span>
+      </template>
+    </SlotCom>
+    <li>作用域插槽：v-slot</li>
+    <SlotCom :optionsList="select.list">
+      <template v-slot:item="slotProps">
+        <span>{{ slotProps.item }}</span>
+      </template>
+    </SlotCom>
+    <li>作用域插槽：v-slot 解构赋值</li>
+    <SlotCom :optionsList="select.list">
+      <template v-slot:item="{ item }">
+        <span>{{ item }}</span>
+      </template>
+    </SlotCom>
+     <li>作用域插槽：v-slot 动态插槽名<el-button @click="changeSlot">change</el-button></li>
+     <SlotCom :optionsList="select.list">
+      <template v-slot:[dynamicSlotName]="{ item }">
+        <span v-if="dynamicSlotName == 'item'">{{ item.label }}  slot = item</span>
+        <span v-if="dynamicSlotName == 'item1'">{{ item.label }} slot = item1</span>
+      </template>
     </SlotCom>
     <li>vuex</li>
   </div>
@@ -54,6 +80,7 @@ export default {
           { label: 'pear', value: 3 }
         ]
       },
+      dynamicSlotName: 'item'
     }
   },
   created() {
@@ -68,6 +95,14 @@ export default {
         label: `test${this.select.list.length+1}`, value: this.select.list.length+1
       })
     },
+    changeSlot() {
+      // this.dynamicSlotName = 'item1'
+      let temp = {
+        item1: "item",
+        item: "item1"
+      }
+      this.dynamicSlotName = temp[this.dynamicSlotName]
+    }
   }
 }
 </script>

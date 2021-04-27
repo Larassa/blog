@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-02-24 09:47:33
  * @LastEditors: larassa
- * @LastEditTime: 2021-04-25 09:50:57
+ * @LastEditTime: 2021-04-27 17:27:56
  * @Description: file content
  */
 import Vue from "vue";
@@ -26,7 +26,12 @@ const routes = [
         path: "/component",
         name: "Component",
         component: () => import("@/views/Component.vue")
-      }
+      },
+      {
+        path: "/model",
+        name: "Model",
+        component: () => import("@/views/Model.vue")
+      },
     ]
   }
 ];
