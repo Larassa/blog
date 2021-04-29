@@ -1,0 +1,57 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-04-29 14:09:30
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-04-29 15:40:05
+ * @Description: this
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this</title>
+</head>
+<body>
+  <!-- this的绑定是在执行时候绑定的 -->
+  <script>
+    var name = "window";
+
+    function sayHi() {
+      console.log(name);
+      console.log(this.name);
+    }
+
+    let obj1 = (function () {
+      var name = "1-1";
+      return {
+        name: "1-2",
+        sayHi: function () {
+          console.log(name);
+          console.log(this.name);
+        },
+      };
+    })();
+
+    let obj2 = (function () {
+      var name = "2-1";
+      return {
+        name: "2-2",
+        sayHi: () => {
+          console.log(name);
+          console.log(this.name);
+        },
+      };
+    })();
+
+    sayHi();  // window   window
+    obj1.sayHi(); // 1-1   1-2
+    obj2.sayHi(); // 2-1  window
+    obj1.sayHi = sayHi;
+    obj1.sayHi();  // window 1-2
+    obj1.sayHi = obj2.sayHi;
+    obj1.sayHi();  // 2-1 window
+  </script>
+</body>
+</html>

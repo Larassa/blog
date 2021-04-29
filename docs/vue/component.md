@@ -1,71 +1,37 @@
 
 # 组件间通信
 
-## 父子组件
+## props传参
 
-> 父组件先将子组件引入并注册，在子组件上通过v-bind自定义传值的名称，v-on自定义接收子组件触发的方法
+- 父传子`props`
+- 子传父 `$emit`
 
-父组件
+## 非props传参
 
-```vue
-<template>
-	<div>
-    <child  :msg=msg @childClick="childClick"></child>
-  </div>
-</template>
-<script>
-  import child from './child'
-	export default {
-    name: 'parent',
-    components: {
-      child
-    },
-    data() {
-      return {
-        msg: 'parent'
-      }
-    },
-    methods: {
-      childClick(param) {
-        this.msg = param
-      }
-    }
-  }
-</script>
-```
+- 父传子`$attrs`
+- 子传父`$listeners`（<a href="https://v3.cn.vuejs.org/guide/migration/listeners-removed.html#%E6%A6%82%E8%A7%88">`vue3`已废弃</a>）
 
-> 子组件在props接收负组件传过来的值，通过$emit触发向父组件传值
+## 获取组件实例
 
-子组件
+- `$parent`
+- `$children`
+- `$root`
 
-```vue
-<template>
-	<div>
-    <div @click="childClick">{{ msg }}</div>
-  </div>
-</template>
-<script>
-	export default {
-    name: 'child',
-    props: {
-      msg: {
-        type: String,
-        default: null
-      },
-    },
-    methods: {
-      childClick() {
-        this.$emit( 'childClick', 'child' )
-      }
-    }
-  }
-</script>
-```
+## 深入穿透
 
-扩展
+- `provide/inject`
 
-> 父组件通过slot插槽内容分发向子组件传值，具体使用可以前往[插槽](/vue/slot)
+（`provide` 和 `inject` 绑定并不是可响应的。如果传入的是一个可监听的对象，那么其对象的 `property` 还是可响应的。）（<a href="https://v3.cn.vuejs.org/guide/composition-api-provide-inject.html" >`vue3` 是响应式的</a>）
 
-## 兄弟组件
+## vuex
 
-## 爷孙组件
+五大核心
+
+- state
+- mutation
+- action
+- getter
+- mudule
+
+## [插槽](./slot.md)
+
