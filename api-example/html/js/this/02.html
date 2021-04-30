@@ -1,0 +1,52 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-04-30 09:25:09
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-04-30 11:16:33
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this</title>
+</head>
+<body>
+  <script>
+    var length = 10;
+    function fn() {
+      console.log('this', this)
+      console.log(this.length)
+    };
+    var obj = {
+      length: 5, 
+      method: function (fn) {
+        fn();
+        arguments[0]();   // 入参调用  this 指向arguments
+        fn.call(obj, 12);
+        console.log(this)
+      }
+    };
+    obj.method(fn, 1);
+
+    var test = {
+      name: 'test',
+      success: () => {
+        console.log('name', name)
+        console.log('success', this)
+      },
+      fail: function() {
+        console.log('fail', this)
+        var temp = () => {
+          console.log('fail temp', this)
+        }
+        temp()
+      }
+    }
+    test.success()
+    test.fail()
+  </script>
+</body>
+</html>

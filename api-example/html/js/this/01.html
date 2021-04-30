@@ -1,9 +1,9 @@
 <!--
  * @Author: larassa
- * @Date: 2021-04-29 14:09:30
+ * @Date: 2021-04-30 09:24:34
  * @LastEditors: larassa
- * @LastEditTime: 2021-04-29 15:40:05
- * @Description: this
+ * @LastEditTime: 2021-04-30 13:56:39
+ * @Description: file content
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,23 +19,26 @@
     var name = "window";
 
     function sayHi() {
+      console.log('sayHi this', this)
       console.log(name);
       console.log(this.name);
     }
 
-    let obj1 = (function () {
+    let obj1 = function () {
       var name = "1-1";
+      console.log('obj1 this:', this)
       return {
         name: "1-2",
         sayHi: function () {
-          console.log(name);
+          console.log('inside this', this)
           console.log(this.name);
         },
       };
-    })();
+    };
 
     let obj2 = (function () {
       var name = "2-1";
+      // console.log('obj2:', this)
       return {
         name: "2-2",
         sayHi: () => {
@@ -45,13 +48,18 @@
       };
     })();
 
-    sayHi();  // window   window
-    obj1.sayHi(); // 1-1   1-2
-    obj2.sayHi(); // 2-1  window
-    obj1.sayHi = sayHi;
-    obj1.sayHi();  // window 1-2
-    obj1.sayHi = obj2.sayHi;
-    obj1.sayHi();  // 2-1 window
+    // sayHi();  // window   window
+    // obj1.sayHi(); // 1-1   1-2
+    // obj2.sayHi(); // 2-1  window
+    // obj1.sayHi = sayHi;
+    // obj1.sayHi();  // window 1-2
+    // obj1.sayHi = obj2.sayHi;
+    // obj1.sayHi();  // 2-1 window
+
+    let temp = obj1()
+    temp.sayHi = sayHi
+    temp.sayHi()
+
   </script>
 </body>
 </html>
