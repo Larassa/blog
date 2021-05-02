@@ -146,7 +146,8 @@ module.exports = {
             'base/copy',
             'base/prototype',
             'base/symbol',
-            'base/curry'
+            'base/curry',
+            'base/this'
           ]
         },
         {
