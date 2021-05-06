@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>原型</title>
+</head>
+<body>
+	<script>
+		function Fun() {}
+		console.dir(Fun)
+
+		let fun = new Fun()
+		console.log(fun)
+
+		console.log(Fun.__proto__  === fun.__proto__)
+		console.log(Fun.prototype  === fun.__proto__)
+		// let obj = { name: 'obj' }
+		// console.log(obj)
+
+		// fun.__proto__ = { name: 'temp' }
+
+
+	</script>
+</body>
+</html>

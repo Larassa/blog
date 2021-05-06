@@ -147,7 +147,14 @@ module.exports = {
             'base/prototype',
             'base/symbol',
             'base/curry',
-            'base/this'
+            'base/this',
+						{
+							title: '对象',
+							collapsable: false,
+							children: [
+								'base/object-create'
+							]
+						}
           ]
         },
         {

@@ -17,20 +17,20 @@
     function Foo() {
     }
 
-    Foo.prototype.name = 'lisa'
-    Foo.prototype.arr = [1, 2, 3]
+    // Foo.prototype.name = 'lisa'
+    // Foo.prototype.arr = [1, 2, 3]
 
     let b = new Foo()
 
     let a = new Foo()
     // a.name = 'rose'  // 直接赋值不会更改原型上的属性值
-    a.__proto__.name = 'rose' // 指向原型赋值
+    // a.__proto__.name = 'rose' // 指向原型赋值
     // a.arr.push(4) // 对属性进行更改且触发了原始值的变化，原型的值就会发生变化
 
     let c = new Foo()
-    c.__proto__.name = 'jisoo'
+    // c.__proto__.name = 'jisoo'
 
-    Foo.prototype.name = 'jennie'
+    // Foo.prototype.name = 'jennie'
 
     console.log("a", a)
     console.log("b", b)
@@ -38,9 +38,9 @@
     // console.log('a.prototype === b.prototype', a.prototype === b.prototype )
 
     // 实例原型的构造函数就是父类本身
-    console.log('a.__proto__.constructor === Foo', a.__proto__.constructor === Foo)
+    // console.log('a.__proto__.constructor === Foo', a.__proto__.constructor === Foo)
     // 所以实例原型的构造函数 等于 父类的原型
-    console.log('a.__proto__.constructor === Foo.prototype', a.__proto__ === Foo.constructor.prototype)
+    // console.log('a.__proto__.constructor === Foo.prototype', a.__proto__ === Foo.constructor.prototype)
 
     // prototype 和 __proto__
     
