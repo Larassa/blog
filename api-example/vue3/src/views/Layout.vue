@@ -1,30 +1,37 @@
 <!--
  * @Author: larassa
- * @Date: 2021-04-06 11:32:04
+ * @Date: 2021-05-06 14:57:58
  * @LastEditors: larassa
- * @LastEditTime: 2021-05-06 15:09:40
+ * @LastEditTime: 2021-05-06 14:57:59
  * @Description: file content
 -->
+<!-- -->
 <template>
-  <div class="home">
-    {{ temp }}
+  <div>
+
   </div>
-  
 </template>
 
 <script>
 
 export default {
-  name: "Home",
-  components: {
-  },
   data() {
     return {
-      temp: 'temp'
+
     }
   },
+  created() {
+
+  },
+  mounted() {
+
+  },
   methods: {
-    click() {}
+
   }
-};
+}
 </script>
+
+<style scoped lang='scss'>
+
+</style>
