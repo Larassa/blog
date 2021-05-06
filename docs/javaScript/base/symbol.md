@@ -109,6 +109,8 @@ const temp = { ...obj } // temp = { a: 1, b: 2 }
 
 - typeof
 
+可以用来判断数据是什么类型的，但如果是引用类型的数据则统一显示`[object object]`。
+
 ## 关系操作符
 
 - instanceof
@@ -120,13 +122,13 @@ const temp = { ...obj } // temp = { a: 1, b: 2 }
     ```js
     function Foo(color) {
         this.color = color
-
+  
         function getColor()  {
             return this.color
         }
     }
     let foo = new Foo('red')
-
+  
     console.log(foo instanceof Foo)  // true
     ```
 

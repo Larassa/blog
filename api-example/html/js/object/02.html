@@ -1,0 +1,43 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-06 15:25:25
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-06 17:31:51
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+  <input id="ipt" />
+  <script>
+    const ipt = document.getElementById('ipt')
+    let obj = {
+      a: 1,
+      b: 2
+    }
+    for(let key in obj) {
+      // console.log(key)
+      const property = Object.getOwnPropertyDescriptor(obj, key)
+      Object.defineProperty(obj, key, {
+        configurable: true,
+        enumerable: true,
+        get: function() {
+          return property.value * 3
+        },
+        set: function(newVal) {
+          console.log('set:', newVal)
+          property.value = newVal
+        }
+      })
+    }
+
+    
+  </script>
+</body>
+</html>
