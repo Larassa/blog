@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>更改原型</title>
+</head>
+<body>
+	<script>
+		let obj = { name: 'obj' }
+		let temp = { name: 'temp' }
+
+		// 1. 更改原型链
+		// temp.__ptoto__ = obj
+
+		// 2. Object.setPrototypeOf
+		Object.setPrototypeOf(temp, { name: 'objectSetProtottypeOf' })
+
+		
+	</script>
+</body>
+</html>
