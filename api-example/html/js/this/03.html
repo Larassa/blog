@@ -1,0 +1,30 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-07 13:36:05
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-07 13:54:18
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>call</title>
+</head>
+<body>
+  <script>
+    function test() {
+      name = 'test'
+      return `i am ${this.name}`
+      
+    }
+    let temp = {
+      name: 'temp'
+    }
+    const t = test.call(temp)
+    test()
+  </script>
+</body>
+</html>
