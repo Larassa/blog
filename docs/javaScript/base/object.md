@@ -1,6 +1,8 @@
-# 创建对象
+# 对象
 
-## 字面量定义
+## 创建对象
+
+### 字面量定义
 
 ```js
 const obj = {
@@ -8,7 +10,7 @@ const obj = {
 }
 ```
 
-## `Object.create`
+### `Object.create`
 
 ```js
 const obj = Object.create(null, {
@@ -20,7 +22,7 @@ const obj = Object.create(null, {
 
 `Object.create`的第一个参数为null的话，创建出来的对象是没有原型的。
 
-## `new`
+### `new`
 
 ```js
 function Fun() {}

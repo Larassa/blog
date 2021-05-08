@@ -16,6 +16,7 @@
 - `$parent`
 - `$children`
 - `$root`
+- `$refs`
 
 ## 深入穿透
 

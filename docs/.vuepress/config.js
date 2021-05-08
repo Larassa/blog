@@ -148,13 +148,7 @@ module.exports = {
             'base/symbol',
             'base/curry',
             'base/this',
-						{
-							title: '对象',
-							collapsable: false,
-							children: [
-								'base/object-create'
-							]
-						}
+						'base/object'
           ]
         },
         {

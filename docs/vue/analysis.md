@@ -13,9 +13,9 @@
 		- compiler  # 编译
 		- core  
 			- components
-			- global-api
+			- global-api      # 公共的方法
 			- instance
-			- observer        
+			- observer        # 双向绑定
 			- util
 			- vdom            # 虚拟dom
 		- platforms
@@ -136,4 +136,10 @@ Vue.version = '__VERSION__'
 export default Vue
 
 ```
+
+## 双向绑定
+
+## 虚拟dom
+
+虚拟dom的源码集中再`src/core/vdom`文件夹中
 
