@@ -93,7 +93,8 @@ module.exports = {
           collapsable: false,
           children: [
             'canvas',
-            'svg'
+            'svg',
+            'safe'
           ]
         }
       ],
@@ -160,6 +161,16 @@ module.exports = {
             'es6/promise'
           ]
         },
+        {
+          title: '网络',
+          collapsable: false,
+          children: [
+            'net/XMLHttpRequest',
+            'net/axios',
+            'net/http',
+            'net/safe'
+          ]
+        }
       ],
 			"/typeScript/": [
 				''

@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-05-06 14:59:52
  * @LastEditors: larassa
- * @LastEditTime: 2021-05-08 17:35:34
+ * @LastEditTime: 2021-05-10 09:43:46
  * @Description: 侧边栏
 -->
 <!-- -->
@@ -52,12 +52,12 @@ export default {
   methods: {
     getRouteList() {
       console.log(this.$route)
-      // let index = this.$route.name.indexOf("Detail");
-      // let active = this.$route.name;
-      // if (index != -1) {
-      //   active = this.$route.name.substring(0, index);
-      // }
-      // this.activeMenu = active;
+      let index = this.$route.name.indexOf("Detail");
+      let active = this.$route.name;
+      if (index != -1) {
+        active = this.$route.name.substring(0, index);
+      }
+      this.activeMenu = active;
     }
   }
 }

@@ -1,0 +1,30 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-10 14:14:19
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-10 15:10:29
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>xss</title> -->
+</head>
+<body>
+  <input id="ipt" />
+  <div id="val"></div>
+  <!-- <div><script>alert('aaaa')</script></div> -->
+  <script>
+    const ipt = document.getElementById('ipt')
+    const val = document.getElementById('val')
+    ipt.addEventListener('change', function() {
+      val.innerHTML = ipt.value
+      // document.write(ipt.value)
+    })
+    
+  </script>
+</body>
+</html>

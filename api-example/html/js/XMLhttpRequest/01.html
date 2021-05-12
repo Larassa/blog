@@ -1,0 +1,46 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-11 09:52:32
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-11 10:18:11
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest</title>
+</head>
+<body>
+  <script>
+    let http = new XMLHttpRequest()
+    
+    http.open('post', 'https://api.business.beibeilam.com/api/v2/codes?phone_no=15643430618&status=2&url=www.beibeilam.com')
+    http.setRequestHeader('Content-Type', 'application/json')
+    let data = {
+      'aaa': 'aaa'
+    }
+    http.send(JSON.stringify(data))
+
+    // 无论请求是否成功都会触发
+    http.onloadend = function(e) {
+      console.log('onloadend', e)
+    }
+
+    // 只在请求成功时才触发
+    http.onload = function(e) {
+      console.log('onload', e)
+    }
+
+    // 接收到数据时触发
+    http.loadstart = function(e) {
+      console.log('loadstart', e)
+    }
+
+    // 中断请求
+    http.abort()
+  </script>
+</body>
+</html>

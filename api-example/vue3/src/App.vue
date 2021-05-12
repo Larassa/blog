@@ -2,14 +2,10 @@
  * @Author: larassa
  * @Date: 2021-04-06 11:32:04
  * @LastEditors: larassa
- * @LastEditTime: 2021-05-08 15:55:20
+ * @LastEditTime: 2021-05-10 09:39:34
  * @Description: file content
 -->
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
   <router-view />
 </template>
 

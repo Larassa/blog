@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-02-24 09:47:33
  * @LastEditors: larassa
- * @LastEditTime: 2021-04-27 17:27:56
+ * @LastEditTime: 2021-05-10 13:09:11
  * @Description: file content
  */
 import Vue from "vue";
@@ -31,6 +31,11 @@ const routes = [
         path: "/model",
         name: "Model",
         component: () => import("@/views/Model.vue")
+      },
+      {
+        path: "/safe",
+        name: "Safe",
+        component: () => import("@/views/save.vue")
       },
     ]
   }

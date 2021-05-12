@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-04-06 11:32:04
  * @LastEditors: larassa
- * @LastEditTime: 2021-05-08 17:36:02
+ * @LastEditTime: 2021-05-10 09:39:20
  * @Description: file content
  */
 import { createRouter, createWebHistory } from "vue-router";
@@ -13,7 +13,13 @@ const routes = [
   {
     path: "/",
     component: Layout,
-    
+    children: [
+      {
+        path: '/',
+        name: 'DashBoard',
+        component: () => import('@/views/Home.vue')
+      }
+    ]
   },
   {
     path: "/about",
