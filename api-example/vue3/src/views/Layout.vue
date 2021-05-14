@@ -2,14 +2,18 @@
  * @Author: larassa
  * @Date: 2021-05-06 14:57:58
  * @LastEditors: larassa
- * @LastEditTime: 2021-05-08 15:51:51
+ * @LastEditTime: 2021-05-14 16:57:51
  * @Description: file content
 -->
 <!-- -->
 <template>
-  <div>
+  <div class="container">
     <SideBar></SideBar>
+    <div class="flex-box">
+      <router-view></router-view>
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -37,5 +41,12 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
+.container {
+  display: flex;
+  .flex-box {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
 </style>

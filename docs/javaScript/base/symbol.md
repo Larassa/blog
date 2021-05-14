@@ -107,28 +107,28 @@ const temp = { ...obj } // temp = { a: 1, b: 2 }
 
 ## 一元操作符
 
-- typeof
+- `typeof`
 
 可以用来判断数据是什么类型的，但如果是引用类型的数据则统一显示`[object object]`。
 
 ## 关系操作符
 
-- instanceof
+- `instanceof`
 
-  > 1. instanceof用于确认对象是什么类型，与typeof相比，instanceof更为具体，且instanceof可以判断一个实例是否属于他的父类
-  >
-  > 2. instanceof判断一个实例是否属于他的父类的原理是原型链，实例的__proto__和父类的prototype相等
+   1. `instanceof`用于确认实例对象是什么类型，判断一个实例是否属于他的父类。
+  2. `instanceof`判断一个实例是否属于他的父类的原理是原型链，实例的`__proto__`和父类的`prototype`相等。
+   3. `instanceof`不能用于判断原始值类型。
 
     ```js
     function Foo(color) {
         this.color = color
-  
+    
         function getColor()  {
             return this.color
         }
     }
     let foo = new Foo('red')
-  
+    
     console.log(foo instanceof Foo)  // true
     ```
 

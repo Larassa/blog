@@ -1,0 +1,29 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-12 09:35:52
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-12 13:48:43
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>websocket</title>
+</head>
+<body>
+  <script>
+    const socket = new WebSocket('ws://localhost:8001');
+    socket.addEventListener('open', function (event) {
+        // socket.send('Hello Server!');
+    });
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+        console.log('Message from server ', event.data);
+    });
+  </script>
+</body>
+</html>

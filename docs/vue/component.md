@@ -34,5 +34,9 @@
 - getter
 - mudule
 
+## `event bus`
+
+
+
 ## [插槽](./slot.md)
 
