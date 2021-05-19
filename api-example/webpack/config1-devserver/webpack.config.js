@@ -1,3 +1,4 @@
+
 const { resolve } = require('path')
 
 const htmlWebpackPlugin = require('html-webpack-plugin')
@@ -33,6 +34,9 @@ module.exports = {
 		host: '0.0.0.0',
 		// 允许使用ip访问
 		useLocalIp: true,
+		// 热更新
+		hot: false,
+
 		before(app){
 			console.log('before',app)
 		},
