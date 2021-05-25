@@ -1,0 +1,46 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-24 16:59:05
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-25 09:38:32
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function timeout(time, data) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          console.log('data', data)
+          resolve(data)
+        }, time)
+      })
+    }
+    function getPort(port) {
+      console.log('port', port)
+    }
+
+    function temp() {
+      const ports = [ 9000, 9001, 9002, 9003 ]
+      return Promise.any(
+        ports.map( port => {
+          Promise.race([
+            timeout(3000, port).then(res => {
+              console.log('res', res)
+            })
+          ]).then(res => {
+            console.log('race res', res)
+          })
+        })
+      )
+    }
+  </script>
+</body>
+</html>

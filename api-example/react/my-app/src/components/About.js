@@ -1,8 +1,15 @@
+/*
+ * @Author: larassa
+ * @Date: 2021-04-27 09:48:57
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-21 14:00:14
+ * @Description: file content
+ */
 import React from 'react';
 import {
   Link,
   Switch,
-	Route
+	// Route
 } from 'react-router-dom';
 import RouterConfig from '../router/index'
 export default class About extends React.Component {
