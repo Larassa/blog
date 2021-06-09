@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function MaxSubsequence(array) {
+			if(!array.length) return
+			let max = 0
+			let sum = 0
+			array.forEach(item => {
+				sum += item
+				if(sum < 0) {
+					sum = 0
+					sub = []
+				}
+				if(sum > max) {
+					max = sum
+				}
+			})
+			return max
+		}
+		
+	</script>
+</body>
+</html>
