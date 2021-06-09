@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-08 11:00:05
- * @LastEditTime: 2021-05-10 16:30:32
+ * @LastEditTime: 2021-05-21 16:46:49
  * @LastEditors: larassa
  * @Description: In User Settings Edit
  * @FilePath: \larassa-blog\api-example\vue2\src\views\Home.vue
@@ -23,22 +23,22 @@ export default {
 		}
 	},
   created() {
-    this.$http({
-    	url: 'api/v2/admin/refundlist',
-    	method: 'get',
-      params: {
-        order_no: '',
-        type: '',
-        status: '',
-        offset: 1,
-        limit: 10,
-        order_name: 'created_at',
-        order_type: 'desc',
-      }
-    }).then(res => {
-			console.log('res', res)
-			this.list = res
-    })
+    // this.$http({
+    // 	url: 'api/v2/admin/refundlist',
+    // 	method: 'get',
+    //   params: {
+    //     order_no: '',
+    //     type: '',
+    //     status: '',
+    //     offset: 1,
+    //     limit: 10,
+    //     order_name: 'created_at',
+    //     order_type: 'desc',
+    //   }
+    // }).then(res => {
+		// 	console.log('res', res)
+		// 	this.list = res
+    // })
   }
 };
 </script>

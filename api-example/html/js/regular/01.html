@@ -1,0 +1,28 @@
+<!--
+ * @Author: larassa
+ * @Date: 2021-05-27 14:19:30
+ * @LastEditors: larassa
+ * @LastEditTime: 2021-05-27 14:26:09
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>后盾人不断分享视频教程，学习后盾人教程提升编程能力。</main>
+  <script>
+    // 断言匹配
+    const main = document.querySelector("main");
+    const reg = /后盾人(?=教程)/gi;
+    main.innerHTML = main.innerHTML.replace(
+      reg,
+      v => `<a href="https://houdunren.com">${v}</a>`
+    );
+  </script>
+</body>
+</html>

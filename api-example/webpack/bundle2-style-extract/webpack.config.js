@@ -1,4 +1,5 @@
 
+
 /**
  * webpack.config.js 是webpack的配置文件
  * 作用：指示 webpack 干哪些活（当你运行 webpack 指令时，会加载里面的配置）
@@ -62,7 +63,7 @@
 		}),
 		// 详细plugins的配置
 		new MiniCssExtractPlugin({
-			filename: 'css/app.[hash:10].css'
+			filename: 'css/[name].[hash:10].css'
 		})
 	],
  }

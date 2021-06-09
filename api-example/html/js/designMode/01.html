@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-05-19 16:40:00
  * @LastEditors: larassa
- * @LastEditTime: 2021-05-19 16:40:10
+ * @LastEditTime: 2021-05-21 13:54:08
  * @Description: file content
 -->
 <!DOCTYPE html>
@@ -15,6 +15,21 @@
 </head>
 <body>
   <script>
+    const test = (function() {
+      let temp
+      return function() {
+        console.log('temp', temp)
+        if(!temp) {
+          temp = 1
+        }
+        return temp
+      }
+    })()
+
+    let t = test()
+    let t1 = test()
+
+    
     
   </script>
 </body>

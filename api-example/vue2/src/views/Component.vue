@@ -2,7 +2,7 @@
  * @Author: larassa
  * @Date: 2021-04-25 09:22:35
  * @LastEditors: larassa
- * @LastEditTime: 2021-04-27 11:21:20
+ * @LastEditTime: 2021-05-21 16:53:33
  * @Description: 组件通信
 -->
 
@@ -61,7 +61,8 @@ export default {
   name: 'ComponentProps',
   provide() {
     return {
-      optionsList: this.select.list // 传入可监听的对象值就是响应式的
+      optionsList: this.select.list, // 传入可监听的对象值就是响应式的
+      app: this
     }
   },
   components: {
