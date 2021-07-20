@@ -1,8 +1,8 @@
 /*
  * @Author: larassa
  * @Date: 2021-04-27 09:48:57
- * @LastEditors: larassa
- * @LastEditTime: 2021-05-21 14:52:13
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-06-22 16:10:57
  * @Description: file content
  */
 import React from 'react';
@@ -15,8 +15,9 @@ import {
 	Link,
 	useHistory 
 } from "react-router-dom";
-import RouterConfig from './router/index'
-import { ROUTES } from './router/routes'
+import RouterConfig from './router/index';
+import RefIndex1 from './pages/ref/Index1';
+import { ROUTES } from './router/routes';
 
 
 class App extends React.Component {
@@ -42,14 +43,24 @@ class App extends React.Component {
 						<li>
 							<Link to={ `/about/?ids=123` }>About</Link>
 						</li>
+						<li>
+							<Link to='/ref'>Ref</Link>
+						</li>
+						<li>
+							<Link to='/ref1'>Ref1</Link>
+						</li>
+						<li>
+							<Link to='/reducer'>reducer</Link>
+						</li>
 					</ul>
+					{/* <RefIndex1>ssssssss</RefIndex1> */}
 					<Switch>
 						{ROUTES.map((route, i) => (
             	<RouterConfig key={i} {...route} />
           	))}
 					</Switch>
 				</Router>
-				<button onClick={this.goHome}>go home</button>
+				{/* <button onClick={this.goHome}>go home</button> */}
 			</div>
 		)
 	}

@@ -170,6 +170,14 @@ module.exports = {
             'net/http',
             'net/safe'
           ]
+        },
+				{
+          title: 'window',
+          collapsable: false,
+          children: [
+						'',
+            'window/navigator',
+          ]
         }
       ],
 			"/typeScript/": [

@@ -8,22 +8,25 @@
 </head>
 <body>
 	<script>
-		setTimeout(() => {
-				console.log(1);
-		}, 0);
+		var f = function () {
+				console.log(this.x);
+		}
 
-		console.log(2);
+		var done = function (fn) {
+				fn ();
+		}
 
-		const promise = new Promise((resolve) => {
-				resolve()
-				console.log(3)
-		})
+		var x = 1; // 改成let会是什么情况
+		var obj = {
+				f: f,
+				x: 2
+		}
 
-		promise.then(() => {
-				console.log(5);
-		})
-
-		console.log(4);
+		f();
+		obj.f();
+		obj.f.call(this);
+		f.call(obj);
+		done(obj.f)
 	</script>
 </body>
 </html>

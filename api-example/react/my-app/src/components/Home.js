@@ -1,10 +1,4 @@
-/*
- * @Author: larassa
- * @Date: 2021-04-27 09:48:57
- * @LastEditors: larassa
- * @LastEditTime: 2021-05-21 14:21:10
- * @Description: file content
- */
+
 import React from 'react';
 import {
 	useHistory,
