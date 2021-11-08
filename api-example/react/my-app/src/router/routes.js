@@ -6,9 +6,9 @@
 import React from 'react';
 import Home from '../components/Home';
 import About from '../components/About';
-import RefIndex from '../pages/ref/Index';
-import RefIndex1 from '../pages/ref/Index1';
-import RefIndex2 from '../pages/ref/Index2';
+// import RefIndex from '../pages/ref/Index';
+// import RefIndex1 from '../pages/ref/Index1';
+// import RefIndex2 from '../pages/ref/Index2';
 import ReducerIndex from '../pages/reducer/Index';
 import Observable from '../pages/mobx/observable';
 import MobxToJS from '../pages/mobx/toJS';
@@ -33,18 +33,18 @@ export const ROUTES = [
       },
     ],
   },
-  {
-    path: '/ref',
-    component: RefIndex,
-  },
-  {
-    path: '/ref1',
-    component: RefIndex1,
-  },
-  {
-    path: '/ref2',
-    component: RefIndex2,
-  },
+//   {
+//     path: '/ref',
+//     component: RefIndex,
+//   },
+//   {
+//     path: '/ref1',
+//     component: RefIndex1,
+//   },
+//   {
+//     path: '/ref2',
+//     component: RefIndex2,
+//   },
   {
     path: '/reducer',
     component: ReducerIndex,
