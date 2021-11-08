@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-08-03 19:38:28
  */
 import React, { useEffect, useRef } from 'react';
-import RefCom1 from './components/Com1';
+// import RefCom1 from './components/Com1';
 const RefIndex2 = () => {
   const ref = useRef();
   useEffect(() => {
@@ -12,7 +12,7 @@ const RefIndex2 = () => {
   }, []);
   return (
     <div>
-      <RefCom1 ref={ref} />
+//       <RefCom1 ref={ref} />
     </div>
   );
 };
